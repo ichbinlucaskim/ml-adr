@@ -1,5 +1,23 @@
 # ml-adr
 
+
+| Paradigm        | Learns from          | Final output                                    |
+| --------------- | -------------------- | ----------------------------------------------- |
+| Supervised      | human labels         | a prediction                                    |
+| Unsupervised    | data structure alone | groups / compressed features / scores / samples |
+| Self-supervised | fabricated labels    | a transferable representation                   |
+| Reinforcement   | reward from acting   | a policy (strategy)                             |
+
+
+- one piece of intuition to keep in mind: industry choices usually come down to **"do you have labels, can you make them, and how expensive are they?"**: Most real-world projects start with supervised, then mix in self-supervised pre-training or unsupervised techniques when labels run short.
+
+```
+Labels abundant/cheap        → Supervised (try this first)
+No labels / expensive        → Unsupervised (structure discovery, anomaly detection)
+Labels expensive but data is a mountain → Self-supervised foundation, then fine-tune with few labels
+Answer comes only as "the result of an action" → Reinforcement
+```
+
 ```
 ┌──────────────────────────────────────────────────────────────┐
 │  ML Task Map (by Learning Paradigm)                          │
@@ -77,14 +95,3 @@ In industry, rather than being the final product itself, this is mostly used as 
 **[D] Reinforcement Learning — "Learn strategy through trial and error"**
 
 Maximizes reward by interacting with an environment. Industrial application is narrower than the other three, but there are powerful niches. Sequential decision-making in recommendation/advertising (what to show next), robot control and autonomous driving, logistics/warehouse route optimization, process/energy control (data-center cooling optimization is famous), and **RLHF for LLMs** (using human preference as the reward signal to refine answers — the process that makes Claude or ChatGPT "follow human intent well").
-
-Finally, one piece of intuition to keep in mind: industry choices usually come down to **"do you have labels, can you make them, and how expensive are they?"**:
-
-```
-Labels abundant/cheap        → Supervised (try this first)
-No labels / expensive        → Unsupervised (structure discovery, anomaly detection)
-Labels expensive but data is a mountain → Self-supervised foundation, then fine-tune with few labels
-Answer comes only as "the result of an action" → Reinforcement
-```
-
-Most real-world projects start with supervised, then mix in self-supervised pre-training or unsupervised techniques when labels run short.

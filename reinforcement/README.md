@@ -107,9 +107,4 @@ Third, **exploration vs exploitation is unique to RL.** A supervised model never
 
 And the connection back to your own world: **RLHF** — the alignment step for models like me — is exactly this pipeline sitting on top of a self-supervised generative model. The pre-trained LLM is the starting policy, *human preference* becomes the reward signal, and PPO-style updates nudge the policy toward responses people prefer. So branches [C] and [D] of your map stack directly: self-supervised builds the capability, RL aligns the behavior
 
-| Paradigm | Learns from | Final output |
-|----------|-------------|--------------|
-| Supervised | human labels | a prediction |
-| Unsupervised | data structure alone | groups / compressed features / scores / samples |
-| Self-supervised | fabricated labels | a transferable representation |
-| Reinforcement | reward from acting | a policy (strategy) |
+
