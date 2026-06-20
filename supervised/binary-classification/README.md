@@ -45,18 +45,18 @@
 │              ▼                                                       │
 │  [7] Loss Computation                                                │
 │      BCE (binary) / CE (multi) / MSE (reg)                           │
-│      + Regularization (L2, dropout, etc.) ★missing★                 │
+│      + Regularization (L2, dropout, etc.) ★missing★                  │
 │              │                                                       │
 │              ▼                                                       │
 │  [8] Backward (Back)                                                 │
 │      compute gradients (backprop)                                    │
 │              │                                                       │
 │              ▼                                                       │
-│  [9] Optimizer step ★missing★                                       │
+│  [9] Optimizer step ★missing★                                        │
 │      SGD/Adam → update W (learning rate)                             │
 │              │                                                       │
 │              ▼                                                       │
-│  [10] Validation (every epoch)                                      │
+│  [10] Validation (every epoch)                                       │
 │       monitor val loss/metric                                        │
 │       → Early Stopping / checkpoint                                  │
 │                                                                      │
